@@ -1,3 +1,73 @@
-$main-container:1170px;
-$middle-container:1050px;
-$main-container:980px;
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+#header {
+    background-color: rgba(255, 195, 139, 0.05);
+    .container-main::before {
+        content: "";
+        width: 55%;
+        height: 39%;
+        background-color: #ff926b;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -119px;
+    }
+    .container-main {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 40px;
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 226px;
+            .icon {
+                span {
+                    @include text-style(34px, 700, 100%, #1f1f33);
+                }
+            }
+            nav {
+                ul {
+                    li {
+                        display: inline-block;
+                        margin: 10px 50px 0 0;
+                        a {
+                            @include text-style(18px, 500, 100%, #1f1f33);
+                        }
+                    }
+                    li:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .information {
+            position: relative;
+            h1 {
+                @include text-style(52px, 500, 64px, #1f1f33);
+                margin-bottom: 30px;
+            }
+            p {
+                @include text-style(20px, 400, 100%, #1f1f33);
+                margin-bottom: 50px;
+            }
+            a {
+                @include text-style(18px, 500, 100%, white);
+                background-color: #ff926b;
+                padding: 17px 40px;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            #downward-arrow {
+                transform: translate(-96px, 126px);
+            }
+            #main-img {
+                position: absolute;
+                top: -179px;
+                right: -119px;
+            }
+        }
+    }
+}
