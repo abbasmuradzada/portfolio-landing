@@ -1,5 +1,7 @@
 @import "./variables";
 @import "./common";
+@import "./mixins";
+@import "./features";
 
 .container-small {
     margin: auto;
@@ -62,4 +64,5 @@
         }
     }
 }
+
 
